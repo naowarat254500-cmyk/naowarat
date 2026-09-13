@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!--menu--> 
+<div id="menu-container"></div>
+
+
+<!-- Content here -->
+<div class="container">
+    <!-- Content here -->
+    <h3 class="alert alert-success mt4 col-md-4">หน้าหลัก</h3>
+ 
+
+  <div class="alert alert-primary text-center" role="alert">
+    Mai Naowarat
+</div>
+
+<div class="text-end mb-4">
+
+    <a class="btn btn-info"  href="https://www.google.com/?hl=th">google</a>
+    
+</div>
+</div> <!--and container-->
+
+<!--แบ่งคอลัมด้วย-->
+
+<div class="container text-center">
+    <div class="row">
+      <div class="col-sm-4 bg-success-subtle">
+        แมวน่ารัก1  <br>
+      <img src="image/แมว.jpg" width="500" height="500">
+
+      </div>
+      <div class="col-4 bg-success-subtle">
+        แมวน่ารักกกก2 <br>
+        <img src="image/แมว2.jpg" width="500" height="500">
+      </div>
+      <div class="col-4 bg-success-subtle">
+        <h4>Register</h4>
+
+        <form class="text-start">
+            <div class="mb-3">
+              <label for="form-label" class="form-label">Firstname</label>
+              <input type="text" class="form-control" id="Firstname" required placeholder="Input firstname">
+              
+            </div>
+            <div class="mb-3">
+                <label for="form-label" class="form-label">Lastname</label>
+                <input type="text" class="form-control" id="Lastname" required placeholder="Input lastname">
+                
+              </div>
+              <div class="mb-3">
+                <label for="form-label" class="form-label">Telephone</label>
+                <input type="number" class="form-control" id="Telephone" required placeholder="EX-XXXXXXXX">
+                 </div>
+
+                 <div class="mb-3">
+                    <select class="form-select" id="province" required  >
+                        <option selected>เลือกจังหวัด</option>
+                        <option value="ชลบุรี">ชลบุรี</option>
+                        <option value="ระยอง">ระยอง</option>
+                        <option value="เชียงราย">เชียงราย>
+                      </select>  
+
+              <div class="mb-3">
+                <label for="form-label" class="form-label">Email addresss</label>
+                <input type="text" class="form-control" id="Email addresss" required placeholder="Input Email">
+                
+              </div>
+
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="pw">
+            </div>
+
+            
+            </div>
+            <button type="submit-" class="btn btn-primary">Submit</button>
+            <button type="submit-" class="btn btn-primary">Cancle</button>
+          </form>
+
+      </div> <!--end col คอลัมที่3-->
+    </div> <!--end row-->
+  </div>
+
+
+
+</div>
+
+</body>
+</html>
+
+<script src="js/bootstrap.bundle.min.js" ></script>
+  
+
+  <script>
+   // โหลด menu1.js
+   fetch("menu.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("menu-container").innerHTML = data;
+
+            // ✅ re-bind toggle หลังจากเมนูถูก inject
+            const sidebarToggle = document.body.querySelector('#sidebarToggle');
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', event => {
+                    event.preventDefault();
+                    document.body.classList.toggle('sb-sidenav-toggled');
+                });
+            }
+        });
+
+
+
+
+
+  </script>

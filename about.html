@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="menu-container"></div>
+    
+    <div class="container">
+    <h4 class="alert alert-success mt4 col-md-12">ข้อมูลเกี่ยวกับเรา</h4>
+    <div class="row">
+    <div class="col-md-6">
+        ตลาดนินจา <br>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7761.8681757340255!2d100.99899182925361!3d13.416406962125507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d3615e04c88bd%3A0x3980934d368242e7!2sNinja%20Market%20Amata!5e0!3m2!1sen!2sth!4v1788719905790!5m2!1sen!2sth" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+<div class="col-md-6">
+    <div class="h4 text-success Fw-bold">ตลาดนินจา<div>
+     <img src="image/ตลาดนัดนินจา.jpg"class="img-fluid">   
+    </div>
+    ตลาดนินจาอมตะ เป็นตลาดนัดกลางคืนขนาดใหญ่ที่สุดในย่านอมตะนคร จังหวัดชลบุรี ตั้งอยู่บนพื้นที่กว่า 80 ไร่ มีร้านค้ารวมกันมากกว่า 2,000 แผง
+    ซนสินค้าภายในตลาดโซนอาหาร: แหล่งรวมสตรีทฟู้ด ของกินเล่น อาหารจานหลัก และเครื่องดื่มหลากหลายโซนแฟชั่น: เสื้อผ้า กระเป๋า รองเท้า และเครื่องประดับราคาประหยัดโซนต้นไม้และสัตว์เลี้ยง: จำหน่ายพันธุ์ไม้ ดอกไม้ และอุปกรณ์สัตว์เลี้ยงต่างๆโซนตลาดนัดมือสอง / แบกะดิน: ของสะสม สินค้ามือสอง และเบ็ดเตล็ดโซนลานนั่งชิล: มีที่นั่งรับประทานอาหารพร้อมเวทีดนตรีสด
+<br>
+
+
+
+
+
+
+</body>
+</html>
+<script src="js/bootstrap.bundle.min.js" ></script>
+<script></script>
+
+<script>
+    // โหลด menu1.js
+    fetch("menu.html")
+         .then(res => res.text())
+         .then(data => {
+             document.getElementById("menu-container").innerHTML = data;
+ 
+             // ✅ re-bind toggle หลังจากเมนูถูก inject
+             const sidebarToggle = document.body.querySelector('#sidebarToggle');
+             if (sidebarToggle) {
+                 sidebarToggle.addEventListener('click', event => {
+                     event.preventDefault();
+                     document.body.classList.toggle('sb-sidenav-toggled');
+                 });
+             }
+         });
+ 
+ 
+ 
+ 
+ 
+   </script>
