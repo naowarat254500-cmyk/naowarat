@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<!--Menu-->
+<div id="menu-container"></div>
+ <!-- Content here -->
+<div class="container">
+    <!-- Content here -->
+
+    <h3 class="alert alert-success mt4 col-md-4">ข้อมูลแสดงสินค้า</h3>
+
+<div class="container text-center">
+    <div class="row">
+
+      <div class="col-sm-3"> 
+      <img src="image/ชา1.jpg" width="100%" height="350px" >
+      <h4 class="mt-2">ชานม</h4>
+        <p class="text-primary">Price 69.-</p> 
+        <a class="btn btn-success" href="#" role="button"><span class="bi bi-cart-plus"> Add</span></a> 
+      </div>
+
+      <div class="col-sm-3">
+        <img src="image/ชา2.jpg"width="100%" height="350px">
+        <h4 class="mt-2">ชานม</h4>
+        <p class="text-primary">Price 75.-</p>
+        <a class="btn btn-success" href="#" role="button"><span class="bi bi-cart-plus"> Add</span></a>
+      </div>
+
+      <div class="col-sm-3" >
+        <img src="image/ชา3.jpg" width="100%" height="350px">
+        <h4 class="mt-2">ชานม</h4>
+        <p class="text-primary">Price 40.-</p>
+        <a class="btn btn-success" href="#" role="button"><span class="bi bi-cart-plus"> Add</span></a>
+      </div>
+
+      <div class="col-sm-3">
+        <img src="image/ชา4.jpg" width="100%" height="350px">
+        <h4 class="mt-2">ชานม</h4>
+        <p class="text-primary">Price 45.-</p>
+        <a class="btn btn-success" href="#" role="button"><span class="bi bi-cart-plus"> Add</span></a>
+      </div>
+
+      <div class="col-sm-3">
+        <img src="image/ชา5.jpg" width="100%" height="350px" >
+        <h4 class="mt-2"> ชานม</h4>
+        <p class="text-primary">Price 55.-</p>
+        <a class="btn btn-success" href="#" role="button"><span class="bi bi-cart-plus"> Add</span></a>
+        </div>
+  
+        <div class="col-sm-3">
+        <img src="image/ชา6.jpg"width="100%" height="350px">
+        <h4 class="mt-2"> ชานม</h4>
+        <p class="text-primary">Price55.-</p>
+        <a class="btn btn-success" href="#" role="button"><span class="bi bi-cart-plus"> Add</span></a>
+        </div>
+  
+        <div class="col-sm-3">
+        <img src="image/ชา7.jpg" width="100%" height="350px">
+        <h4 class="mt-2">ชานม</h4>
+        <p class="text-primary">Price 45.-</p>
+        <a class="btn btn-success" href="#" role="button"><span class="bi bi-cart-plus"> Add</span></a>
+        </div>
+  
+        <div class="col-sm-3">
+        <img src="image/ชา8.jpg" width="100%" height="350px">
+        <h4 class="mt-2">ชา8</h4>
+        <p class="text-primary">Price 65.-</p>
+        <a class="btn btn-success" href="#" role="button"><span class="bi bi-cart-plus"> Add</span></a>
+        </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+
+<script src="js/bootstrap.bundle.min.js" ></script>
+<script src="js/menu.js" ></script>
+
+<script>
+   // โหลด menu1.js
+   fetch("menu.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("menu-container").innerHTML = data;
+
+            // ✅ re-bind toggle หลังจากเมนูถูก inject
+            const sidebarToggle = document.body.querySelector('#sidebarToggle');
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', event => {
+                    event.preventDefault();
+                    document.body.classList.toggle('sb-sidenav-toggled');
+                });
+            }
+        });
+
+
+
+
+
+</script>
